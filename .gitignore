@@ -3,3 +3,19 @@
 credentials.json
 
 token.json
+
+__pycache__
+
+
+agents/__pycache__
+
+api/__pycache__
+
+prompts/__pycache__
+
+schemas/__pycache__
+
+test/
+
+tools/__pycache__
+
