@@ -1,0 +1,2 @@
+Skip the supervisor when only one agent could possibly be next. E.g., after availability checks, you almost always go to scheduler next — hardcode that edge instead of asking the LLM.
+Cache routing decisions for identical/near-identical prompts.
