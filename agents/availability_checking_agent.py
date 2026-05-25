@@ -27,6 +27,6 @@ def check_availability(start_time, end_time):
 
 availability_checking_agent = create_agent(
     model="gpt-4o-mini",
-    system_prompt=availability_checking_prompt(today=datetime.now().strftime("%Y-%m-%d")),
+    system_prompt=availability_checking_prompt(datetime.now().strftime("%Y-%m-%d")),
     tools=[check_availability],
 )

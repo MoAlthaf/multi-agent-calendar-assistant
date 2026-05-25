@@ -1,10 +1,10 @@
 from langchain.agents import create_agent
 from langchain.tools import tool
-from tools.calendar_tools import remove_event
+from tools.calendar_tools import remove_event,get_calendar_service
 from prompts.prompts import deleting_prompt
 
 
-@tool("remove_event", return_direct=True)
+@tool("remove_event", return_direct=False)
 def delete_event(event_id: str):
     """
     Removes/deletes an event from the user's Google Calendar
@@ -34,6 +34,7 @@ def delete_event(event_id: str):
         If the event does not exist or the Google Calendar
         API request fails.
     """
+    return remove_event(get_calendar_service(),event_id)
 
 
 removal_agent= create_agent(

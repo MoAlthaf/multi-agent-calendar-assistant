@@ -37,7 +37,7 @@ builder.add_node("supervisor", supervisor_node)
 builder.add_node("scheduler", scheduler_agent)
 builder.add_node("availability", availability_checking_agent)
 builder.add_node("editor", editing_agent)
-builder.add_node("removal",removal_agent)
+builder.add_node("deleter",removal_agent)
 builder.set_entry_point("supervisor")
 builder.add_conditional_edges(
     "supervisor",
@@ -46,7 +46,7 @@ builder.add_conditional_edges(
         "scheduler": "scheduler",
         "availability": "availability",
         "editor":"editor",
-        "removal":"removal",
+        "deleter":"deleter",
         "chat": END,
         "FINISH": END,
     },
@@ -54,6 +54,6 @@ builder.add_conditional_edges(
 builder.add_edge("scheduler", "supervisor")
 builder.add_edge("availability", "supervisor")
 builder.add_edge("editor","supervisor")
-builder.add_edge("removal","supervisor")
+builder.add_edge("deleter","supervisor")
 
 graph = builder.compile(checkpointer=InMemorySaver())
