@@ -1,4 +1,4 @@
-# ScheduleMe - Multi-Agent Google Calendar Assistant
+# Multi-Agent Google Calendar Assistant
 
 A natural language calendar assistant powered by multiple specialized AI agents. Intelligently schedule meetings, check availability, edit events, and remove conflicts using conversational commands.
 
